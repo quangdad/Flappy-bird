@@ -55,6 +55,9 @@ function run(){
 document.addEventListener("keypress", function(){
     bird.y-=60;
 })
+document.addEventListener("click", function(){
+    bird.y-=60;
+})
 run();  
 
 
