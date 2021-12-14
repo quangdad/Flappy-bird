@@ -33,7 +33,7 @@ function run(){
 
         context.drawImage(ongDuoi, ong[i].x, ong[i].y+khoangcachdenongduoi)
 
-        ong[i].x-=5;
+        ong[i].x-=3;
         if(ong[i].x==canvas.width/2-100){
             ong.push({
                 x:canvas.width,
@@ -53,10 +53,10 @@ function run(){
     requestAnimationFrame(run);   
 }
 document.addEventListener("keypress", function(){
-    bird.y-=60;
+    bird.y-=50;
 })
 document.addEventListener("click", function(){
-    bird.y-=60;
+    bird.y-=50;
 })
 run();  
 
