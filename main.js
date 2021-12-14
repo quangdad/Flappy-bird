@@ -20,7 +20,7 @@ var bird = {
 }
 var ong=[];
 ong[0]={
-    x:canvas.width-100,
+    x:canvas.width,
     y:0
 }
 function run(){
@@ -34,7 +34,7 @@ function run(){
         context.drawImage(ongDuoi, ong[i].x, ong[i].y+khoangcachdenongduoi)
 
         ong[i].x-=3;
-        if(ong[i].x==canvas.width/2-100){
+        if(ong[i].x==canvas.width/3){
             ong.push({
                 x:canvas.width,
                 y:Math.floor(Math.random()*ongTren.height)-ongTren.height
