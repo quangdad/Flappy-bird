@@ -7,11 +7,13 @@
         <title>Flappy bird</title>
     </head>
     <body>
-        <audio src="audio/audiomp3.mp3" controls autoplay loop>
-        </audio>
         <div class="container">
             <canvas id="gamezone" width="900" height="500"></canvas>
-        <p id="score">score: 0</p>
+            <p id="score">score:0</p>
+            <button id="playbutton" onclick="playgame()"></button>
+            <audio id="autoplay" loop>
+                <source src="audio/audiomp3.mp3">
+            </audio> 
         </div>
     </body>
     <script src="main.js"></script>

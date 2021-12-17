@@ -9,4 +9,15 @@
     height: fit-content;
     background-color:rgb(211, 212, 212);
     padding: 2px;
+    background-image: url(images/nenchinh2.png);
+    background-repeat: no-repeat;
+}
+#playbutton{
+    width: 80px;
+    height: 65px;
+    background-image: url(images/playbutton.png);
+    background-position: center;
+}
+.hidden{
+    visibility: hidden;
 }

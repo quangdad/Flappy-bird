@@ -1,6 +1,8 @@
 var canvas = document.getElementById('gamezone');
+var audio = document.getElementById('autoplay');
 var context = canvas.getContext('2d');
 var scoreshow = document.getElementById('score');
+var playbtn = document.getElementById('playbutton')
 
 var birdImg = new Image();
 var hinhNenChinh = new Image();
@@ -27,6 +29,7 @@ function run(){
     context.drawImage(hinhNenChinh,0,0);
     context.drawImage(birdImg, bird.x, bird.y);
 
+    bird.y+=3;
     for(var i=0; i<ong.length; i++){
         khoangcachdenongduoi=ongTren.height+khoangcach2ong;
         context.drawImage(ongTren, ong[i].x, ong[i].y);
@@ -49,15 +52,18 @@ function run(){
             }
     }
     scoreshow.innerHTML="score:"+score;
-    bird.y+=3;
-    requestAnimationFrame(run);   
+    requestAnimationFrame(run);
 }
+function playgame() {
+    playbtn.classList.add("hidden");
+    document.getElementById('autoplay').play();
+    run();
+ }
 document.addEventListener("keypress", function(){
     bird.y-=50;
 })
 document.addEventListener("click", function(){
     bird.y-=50;
 })
-run();  
 
 
